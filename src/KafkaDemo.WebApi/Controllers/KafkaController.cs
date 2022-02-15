@@ -9,19 +9,19 @@ public class KafkaController : ControllerBase
 {
 
     private readonly ILogger<KafkaController> _logger;
-    private readonly IKafkaService _kafkaService;
+    private readonly IKafkaProducerService _kafkaProducerService;
 
-    public KafkaController(ILogger<KafkaController> logger, IKafkaService kafkaService)
+    public KafkaController(ILogger<KafkaController> logger, IKafkaProducerService kafkaProducerService)
     {
         _logger = logger;
-        _kafkaService = kafkaService;
+        _kafkaProducerService = kafkaProducerService;
     }
 
 
     [HttpPost("registerProducer")]
     public async Task<IActionResult> RegisterProducer(string key, string value)
     {
-        await _kafkaService.RegisterProducer("test",key,value);
+        await _kafkaProducerService.RegisterProducer("test",key,value);
 
         return Ok();
     }

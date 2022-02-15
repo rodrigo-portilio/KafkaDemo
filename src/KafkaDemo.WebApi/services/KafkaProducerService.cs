@@ -3,11 +3,11 @@ using Microsoft.Extensions.Options;
 
 namespace KafkaDemo.WebApi.services;
 
-public class KafkaProducerService : IKafkaService
+public class KafkaProducerService : IKafkaProducerService
 {
     private readonly ILogger<KafkaProducerService> _logger;
 
-    private ApplicationSettings _applicationSettings;
+    private readonly ApplicationSettings _applicationSettings;
 
     ProducerConfig _configProducer;
 
