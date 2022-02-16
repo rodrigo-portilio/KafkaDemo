@@ -1,4 +1,4 @@
-#Project Kafka + .NET6 + Docker
+# Project Kafka + .NET6 + Docker
 
 Project example using Producer and Consumer with Kafka and .Net 6. 
 
@@ -12,8 +12,7 @@ Images example below
 ![docker](images/docker.png)
 ![docker-webapi-consumer-logger](images/docker-webapi-consumer-log.png)
 
-
-###Stack: 
+### Stack: 
 
 - Docker
 - Kafka
